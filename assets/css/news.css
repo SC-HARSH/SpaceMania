@@ -1,0 +1,19 @@
+#heading {
+  font-family: "Sono", sans-serif;
+  font-weight: bolder;
+  font-size: 100px;
+  width: 100%;
+  background-image: url("../images/backgroundOfHeading.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+body {
+  background-image: url("../images/backgroundOfNews.jpeg");
+  background-position: top;
+}
+
+.modalData {
+  font-family: "Kanit", sans-serif;
+}

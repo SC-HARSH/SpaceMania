@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpaceMania</title>
+    <link rel="icon" href="assets/images/logo-icon.png" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      .card img {
+        height: 280px;
+      }
+    </style>
+    <link rel="stylesheet" href="assets/css/news.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a href="index.html"><img id="logo-main" class="navbar-brand img-fluid" style="height: 80px;" src="assets/images/logo-icon.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="game.html">Game</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="filter.html">Filter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.space.com/">Space.com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://sc-harsh.github.io/SPACETECH-SIMULATION/index.html">More information at my second website</a>
+            </li>  
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="text-center my-5">
+        <h1 id="heading">Space News</h1>
+        <hr />
+      </div>
+
+      <template>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card mb-5 shadow-sm">
+            <img src="imgs/a.jpg" class="img-fluid" />
+
+            <div class="card-body">
+              <div class="card-title">
+                <h2>This is the blog title</h2>
+              </div>
+              <div class="card-text">
+                <h4>Date-12/12/12</h4>
+              </div>
+              <a
+                onclick="navigatePage(this.id)"
+                class="btn btn-outline-primary rounded-0 float-end"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </template>
+      <div id="output" class="row"></div>
+    </div>
+
+    <button
+      id="openModal"
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#dataModal"
+      style="display: none"
+    >
+      Open modal
+    </button>
+
+    <div class="modal fade" id="dataModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 id="modalHeading" class="modal-title"></h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body" id="modalBody">
+            <img id="modalImg" class="img-fluid" src="" />
+            <h3 id="modalData"></h3>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+              id="closeModal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- News Js -->
+    <script src="assets/js/news.js"></script>
+    <!-- Bootstrap Js Link -->
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
